@@ -112,10 +112,6 @@ textarea {
   font-size: 15px;
 }
 
-.nav-links a {
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
 .nav-links a:hover,
 .footer-links a:hover {
   color: #67e8f9;
@@ -140,6 +136,7 @@ textarea {
   color: #082f49;
   background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 100%);
   box-shadow: 0 14px 40px rgba(34, 211, 238, 0.22);
+  cursor: pointer;
 }
 
 .button-light {
@@ -155,8 +152,6 @@ textarea {
 
 .button-full {
   width: 100%;
-  border: 0;
-  cursor: pointer;
 }
 
 .hero-grid,
@@ -213,7 +208,6 @@ textarea {
 .hero-paragraph,
 .section-heading p,
 .gradient-panel p,
-.benefit-panel p,
 .contact-layout p,
 .timeline-card p,
 .step-card p,
@@ -444,11 +438,16 @@ textarea {
   line-height: 1.95;
 }
 
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .field-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 14px;
 }
 
 .field-group label {
@@ -485,7 +484,7 @@ textarea {
 }
 
 .form-disclaimer {
-  margin: 14px 0 0;
+  margin: 0;
   font-size: 13px;
   color: #94a3b8;
 }
