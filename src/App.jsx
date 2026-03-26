@@ -194,6 +194,10 @@ export default function App() {
               <p>
                 Want to see how Leadwrench could work for your HVAC company? Reach out and we’ll walk through your current lead flow and show you where opportunities may be slipping through.
               </p>
+              <p>
+                You can also email{" "}
+                <a href="mailto:77195pittman@gmail.com">77195pittman@gmail.com</a>.
+              </p>
             </div>
 
             <div className="glass-panel form-shell">
@@ -203,7 +207,7 @@ export default function App() {
                 className="form-stack"
               >
                 <input type="hidden" name="_subject" value="New Leadwrench demo request" />
-                <input type="hidden" name="_next" value="https://leadwrench-site-s33v.vercel.app/" />
+                <input type="hidden" name="_next" value="https://leadwrench-site-s33v.vercel.app/#contact" />
                 <input type="hidden" name="_captcha" value="false" />
 
                 <div className="field-group">
@@ -230,16 +234,94 @@ export default function App() {
                   />
                 </div>
 
+                <div className="field-group">
+                  <label style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+                    <input
+                      type="checkbox"
+                      name="sms_consent"
+                      value="I consent to receive SMS messages from Leadwrench."
+                      style={{ width: "16px", marginTop: "4px", flexShrink: 0 }}
+                    />
+                    <span>
+                      I consent to receive SMS messages from Leadwrench about demo scheduling,
+                      appointment reminders, lead follow-up, and support. Message frequency may vary.
+                      Message and data rates may apply. Reply STOP to opt out and HELP for help. Consent is not a condition of purchase.
+                    </span>
+                  </label>
+                </div>
+
                 <button type="submit" className="button button-primary button-full">
                   Request Demo
                 </button>
 
                 <p className="form-disclaimer">
-                  By submitting this form, you agree to be contacted by Leadwrench about your request.
-                  Message and data rates may apply for SMS. Reply STOP to opt out.
+                  By submitting this form, you agree to our{" "}
+                  <a href="#privacy-policy">Privacy Policy</a> and{" "}
+                  <a href="#terms">Terms of Service</a>.
                 </p>
               </form>
             </div>
+          </div>
+        </section>
+
+        <section id="privacy-policy" className="content-section">
+          <div className="glass-panel benefit-panel">
+            <span className="section-kicker">Privacy Policy</span>
+            <h2>Privacy Policy</h2>
+            <p>
+              Leadwrench collects information you voluntarily provide through our website forms,
+              including your name, business name, phone number, email address, and any message details
+              you submit. We use this information to respond to inquiries, schedule demos, provide support,
+              and improve our services.
+            </p>
+            <p>
+              If you opt in to SMS, we may use your phone number to send demo scheduling messages,
+              appointment reminders, lead follow-up messages, and support communications. Message
+              frequency may vary. Message and data rates may apply. You may reply STOP to opt out
+              or HELP for help at any time.
+            </p>
+            <p>
+              We may use cookies or basic analytics tools to understand website usage and improve performance.
+              We take reasonable steps to protect the information you submit.
+            </p>
+            <p>
+              You may request to update or delete your information by contacting us at{" "}
+              <a href="mailto:77195pittman@gmail.com">77195pittman@gmail.com</a>.
+            </p>
+            <p>
+              <strong>
+                Mobile opt-in information and consent are never shared with third parties or affiliates for marketing or promotional purposes.
+              </strong>
+            </p>
+          </div>
+        </section>
+
+        <section id="terms" className="content-section section-band">
+          <div className="glass-panel benefit-panel">
+            <span className="section-kicker">Terms of Service</span>
+            <h2>Terms of Service</h2>
+            <p>
+              By using this website or submitting a form, you agree to be contacted by Leadwrench regarding
+              your inquiry, demo scheduling, support, and service-related communications.
+            </p>
+            <p>
+              If you opt in to SMS, you agree to receive text messages from Leadwrench related to demo
+              scheduling, appointment reminders, lead follow-up, and support. Message frequency may vary.
+              Message and data rates may apply.
+            </p>
+            <p>
+              You may opt out of SMS at any time by replying STOP. For help, reply HELP or contact{" "}
+              <a href="mailto:77195pittman@gmail.com">77195pittman@gmail.com</a>.
+            </p>
+            <p>
+              Carriers are not liable for delayed or undelivered messages.
+            </p>
+            <p>
+              This website and services are intended for users 18 years of age or older.
+            </p>
+            <p>
+              Please review our <a href="#privacy-policy">Privacy Policy</a> for details on how information is collected and used.
+            </p>
           </div>
         </section>
       </main>
@@ -248,8 +330,8 @@ export default function App() {
         <div className="footer-inner-wrap">
           <div><strong>Leadwrench</strong> · HVAC lead follow-up systems</div>
           <div className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms</a>
+            <a href="#privacy-policy">Privacy Policy</a>
+            <a href="#terms">Terms</a>
           </div>
         </div>
       </footer>
