@@ -3,18 +3,22 @@ export default function App() {
     {
       title: "Missed Call Text Back",
       desc: "Instantly text back missed HVAC leads so they stop calling the next company on Google.",
+      icon: "✦",
     },
     {
       title: "Lead Follow-Up Automation",
       desc: "Automated SMS and email follow-up sequences that keep prospects engaged until they book.",
+      icon: "↺",
     },
     {
       title: "Pipeline & Tracking",
       desc: "A simple pipeline that shows every lead, every conversation, and every booked job in one place.",
+      icon: "▣",
     },
     {
       title: "Review & Rebooking Systems",
       desc: "Automations that help contractors collect more reviews and turn one-time customers into repeat revenue.",
+      icon: "★",
     },
   ]
 
@@ -29,202 +33,198 @@ export default function App() {
     "Faster response times",
     "Fewer missed opportunities",
     "More booked estimates and jobs",
-    "Clear reporting you can actually understand",
+    "Clear monthly reporting",
   ]
 
   return (
-    <div className="site">
-      <section className="hero">
-        <nav className="nav">
+    <div className="site-shell">
+      <div className="site-glow site-glow-one" />
+      <div className="site-glow site-glow-two" />
+
+      <header className="hero-wrap">
+        <nav className="nav-bar">
           <div>
-            <div className="brand">Leadwrench</div>
-            <div className="brand-sub">HVAC lead follow-up systems</div>
+            <div className="brand-mark">Leadwrench</div>
+            <div className="brand-note">HVAC lead follow-up systems</div>
           </div>
 
           <div className="nav-links">
             <a href="#services">Services</a>
-            <a href="#how-it-works">How it works</a>
+            <a href="#process">Process</a>
             <a href="#results">Results</a>
             <a href="#contact">Contact</a>
           </div>
 
-          <a href="#contact" className="btn btn-light">Book a Demo</a>
+          <a href="#contact" className="button button-light">Book a Demo</a>
         </nav>
 
-        <div className="hero-grid">
-          <div>
-            <div className="badge">Built for small HVAC companies</div>
+        <section className="hero-grid">
+          <div className="hero-copy">
+            <div className="eyebrow-pill">Built for small HVAC companies</div>
             <h1>Stop losing HVAC leads to missed calls and slow follow-up.</h1>
-            <p className="hero-text">
+            <p className="hero-paragraph">
               Leadwrench helps HVAC contractors capture more jobs with missed-call text back,
-              automated follow-up, pipeline tracking, and simple reporting.
+              automated follow-up, pipeline tracking, and simple reporting that actually makes sense.
             </p>
 
             <div className="hero-actions">
-              <a href="#contact" className="btn btn-primary">Get a Free Demo</a>
-              <a href="#services" className="btn btn-secondary">See What We Set Up</a>
+              <a href="#contact" className="button button-primary">Get a Free Demo</a>
+              <a href="#services" className="button button-ghost">See What We Set Up</a>
             </div>
 
-            <div className="results-grid">
+            <div className="mini-proof-grid">
               {results.map((item) => (
-                <div key={item} className="result-chip">{item}</div>
+                <div key={item} className="mini-proof-card">{item}</div>
               ))}
             </div>
           </div>
 
-          <div className="preview-card">
-            <div className="preview-inner">
-              <div className="preview-head">
-                <div>
-                  <p className="muted">Sample Client Snapshot</p>
-                  <h3>ABC Heating & Air</h3>
-                </div>
-                <div className="live-pill">Live System</div>
+          <div className="glass-panel hero-panel">
+            <div className="status-row">
+              <div>
+                <div className="tiny-label">Sample Client Snapshot</div>
+                <h3>ABC Heating & Air</h3>
               </div>
+              <div className="status-pill">Live System</div>
+            </div>
 
-              <div className="preview-box">
-                <div className="row-between">
-                  <span>Missed call detected</span>
-                  <span className="time">1 min ago</span>
-                </div>
-                <p className="muted">Automatic text sent to lead.</p>
+            <div className="timeline-card">
+              <div className="timeline-row">
+                <span>Missed call detected</span>
+                <span className="accent-warm">1 min ago</span>
               </div>
+              <p>Automatic text sent to lead.</p>
+            </div>
 
-              <div className="preview-box preview-highlight">
-                <div className="highlight-title">Lead reply</div>
-                <p>“Yes, my AC stopped working. Can someone come tomorrow?”</p>
+            <div className="timeline-card timeline-card-highlight">
+              <div className="tiny-label accent-cool">Lead reply</div>
+              <p>“Yes, my AC stopped working. Can someone come tomorrow?”</p>
+            </div>
+
+            <div className="metric-grid">
+              <div className="metric-card">
+                <strong>42</strong>
+                <span>Leads tracked</span>
               </div>
-
-              <div className="stat-grid">
-                <div className="stat-box">
-                  <div className="stat-number">42</div>
-                  <div className="stat-label">Leads tracked</div>
-                </div>
-                <div className="stat-box">
-                  <div className="stat-number">18</div>
-                  <div className="stat-label">Booked jobs</div>
-                </div>
-                <div className="stat-box">
-                  <div className="stat-number">9</div>
-                  <div className="stat-label">New reviews</div>
-                </div>
+              <div className="metric-card">
+                <strong>18</strong>
+                <span>Booked jobs</span>
+              </div>
+              <div className="metric-card">
+                <strong>9</strong>
+                <span>New reviews</span>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </header>
 
-      <section id="services" className="section">
-        <div className="section-intro">
-          <p className="section-label">Services</p>
-          <h2>What Leadwrench sets up for HVAC companies</h2>
-          <p>
-            We build practical systems that help small contractors respond faster,
-            stay organized, and book more work.
-          </p>
-        </div>
-
-        <div className="card-grid four">
-          {services.map((service) => (
-            <div key={service.title} className="card">
-              <h3>{service.title}</h3>
-              <p>{service.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="how-it-works" className="section section-alt">
-        <div className="two-col">
-          <div>
-            <p className="section-label green">How it works</p>
-            <h2>A simple system that keeps leads from slipping away</h2>
+      <main>
+        <section id="services" className="content-section">
+          <div className="section-heading">
+            <span className="section-kicker">Services</span>
+            <h2>What Leadwrench sets up for HVAC companies</h2>
             <p>
-              Most HVAC companies do not need more software chaos. They need a clean process
-              that responds fast and keeps every opportunity visible.
+              We build practical systems that help small contractors respond faster,
+              stay organized, and book more work.
             </p>
           </div>
 
-          <div className="step-list">
-            {steps.map((step, index) => (
-              <div key={step} className="step-card">
-                <div className="step-number">{index + 1}</div>
-                <p>{step}</p>
-              </div>
+          <div className="service-grid">
+            {services.map((service) => (
+              <article key={service.title} className="glass-panel service-card">
+                <div className="service-icon">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p>{service.desc}</p>
+              </article>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="results" className="section">
-        <div className="two-col">
-          <div className="card card-gradient">
-            <p className="section-label">Why it matters</p>
-            <h2>Every missed lead has a dollar value attached to it.</h2>
-            <p>
-              When a contractor misses calls after hours or forgets to follow up,
-              that lead usually books somewhere else. Leadwrench is designed to help
-              fix that gap with fast response and clean tracking.
-            </p>
-          </div>
-
-          <div className="card">
-            <h3>What you can expect</h3>
-            <ul className="benefit-list">
-              <li>Faster first-response time for new leads</li>
-              <li>A single place to manage conversations and pipeline stages</li>
-              <li>More consistency in follow-up without adding admin work</li>
-              <li>Clearer monthly visibility into leads, bookings, and reviews</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="section section-alt">
-        <div className="two-col contact-grid">
-          <div>
-            <p className="section-label">Contact</p>
-            <h2>Book a free demo</h2>
-            <p>
-              Want to see how Leadwrench could work for your HVAC company? Reach out and
-              we’ll walk through your current lead flow and show you where opportunities
-              may be slipping through.
-            </p>
-          </div>
-
-          <div className="card form-card">
-            <div className="form-group">
-              <label>Name</label>
-              <input placeholder="Your name" />
+        <section id="process" className="content-section section-band">
+          <div className="two-column-layout">
+            <div>
+              <span className="section-kicker section-kicker-green">Process</span>
+              <h2>A clean system that keeps leads from slipping away</h2>
+              <p>
+                Most HVAC companies do not need more software chaos. They need a faster response
+                process, cleaner visibility, and a workflow that feels easy to run.
+              </p>
             </div>
 
-            <div className="form-group">
-              <label>Business name</label>
-              <input placeholder="ABC Heating & Air" />
+            <div className="stack-list">
+              {steps.map((step, index) => (
+                <div key={step} className="glass-panel step-card">
+                  <div className="step-badge">{index + 1}</div>
+                  <p>{step}</p>
+                </div>
+              ))}
             </div>
-
-            <div className="form-group">
-              <label>Phone or email</label>
-              <input placeholder="you@example.com" />
-            </div>
-
-            <div className="form-group">
-              <label>What do you need help with?</label>
-              <textarea placeholder="Tell us about missed calls, follow-up, reviews, or pipeline issues..." />
-            </div>
-
-            <button className="btn btn-primary full">Request Demo</button>
-
-            <p className="form-note">
-              By submitting this form, you agree to be contacted by Leadwrench about your request.
-              Message and data rates may apply for SMS. Reply STOP to opt out.
-            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer className="footer">
-        <div className="footer-inner">
+        <section id="results" className="content-section">
+          <div className="two-column-layout">
+            <div className="glass-panel gradient-panel">
+              <span className="section-kicker">Why it matters</span>
+              <h2>Every missed lead has a dollar value attached to it.</h2>
+              <p>
+                When a contractor misses calls after hours or forgets to follow up, that lead usually books somewhere else.
+                Leadwrench is designed to help close that gap with fast response and clean tracking.
+              </p>
+            </div>
+
+            <div className="glass-panel benefit-panel">
+              <h3>What you can expect</h3>
+              <ul className="benefit-list">
+                <li>Faster first-response time for new leads</li>
+                <li>A single place to manage conversations and pipeline stages</li>
+                <li>More consistency in follow-up without extra admin work</li>
+                <li>Clear monthly visibility into leads, bookings, and reviews</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="content-section section-band">
+          <div className="contact-layout">
+            <div>
+              <span className="section-kicker">Contact</span>
+              <h2>Book a free demo</h2>
+              <p>
+                Want to see how Leadwrench could work for your HVAC company? Reach out and we’ll walk through your current lead flow and show you where opportunities may be slipping through.
+              </p>
+            </div>
+
+            <div className="glass-panel form-shell">
+              <div className="field-group">
+                <label>Name</label>
+                <input placeholder="Your name" />
+              </div>
+              <div className="field-group">
+                <label>Business name</label>
+                <input placeholder="ABC Heating & Air" />
+              </div>
+              <div className="field-group">
+                <label>Phone or email</label>
+                <input placeholder="you@example.com" />
+              </div>
+              <div className="field-group">
+                <label>What do you need help with?</label>
+                <textarea placeholder="Tell us about missed calls, follow-up, reviews, or pipeline issues..." />
+              </div>
+
+              <button className="button button-primary button-full">Request Demo</button>
+              <p className="form-disclaimer">
+                By submitting this form, you agree to be contacted by Leadwrench about your request. Message and data rates may apply for SMS. Reply STOP to opt out.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="footer-bar">
+        <div className="footer-inner-wrap">
           <div><strong>Leadwrench</strong> · HVAC lead follow-up systems</div>
           <div className="footer-links">
             <a href="#">Privacy Policy</a>
