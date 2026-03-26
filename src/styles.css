@@ -1,254 +1,558 @@
-export default function LeadwrenchWebsite() {
-  const services = [
-    {
-      title: "Missed Call Text Back",
-      desc: "Instantly text back missed HVAC leads so they stop calling the next company on Google.",
-    },
-    {
-      title: "Lead Follow-Up Automation",
-      desc: "Automated SMS and email follow-up sequences that keep prospects engaged until they book.",
-    },
-    {
-      title: "Pipeline & Tracking",
-      desc: "A simple pipeline that shows every lead, every conversation, and every booked job in one place.",
-    },
-    {
-      title: "Review & Rebooking Systems",
-      desc: "Automations that help contractors collect more reviews and turn one-time customers into repeat revenue.",
-    },
-  ];
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f8fafc;
+  background: #020617;
+}
 
-  const steps = [
-    "A lead calls your business after hours or during a busy period.",
-    "Leadwrench instantly follows up with a text and keeps the conversation moving.",
-    "The lead is tracked inside your pipeline so nothing slips through the cracks.",
-    "Your team books more jobs without adding more manual admin work.",
-  ];
+* {
+  box-sizing: border-box;
+}
 
-  const results = [
-    "Faster response times",
-    "Fewer missed opportunities",
-    "More booked estimates and jobs",
-    "Clear reporting you can actually understand",
-  ];
+html {
+  scroll-behavior: smooth;
+}
 
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.18),transparent_30%),radial-gradient(circle_at_top_left,rgba(34,197,94,0.18),transparent_30%)]" />
-        <div className="relative mx-auto max-w-7xl px-6 py-8">
-          <nav className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
-            <div>
-              <div className="text-2xl font-black tracking-tight">Leadwrench</div>
-              <div className="text-xs text-slate-300">HVAC lead follow-up systems</div>
-            </div>
-            <div className="hidden gap-6 text-sm text-slate-200 md:flex">
-              <a href="#services" className="hover:text-white">Services</a>
-              <a href="#how-it-works" className="hover:text-white">How it works</a>
-              <a href="#results" className="hover:text-white">Results</a>
-              <a href="#contact" className="hover:text-white">Contact</a>
-            </div>
-            <a
-              href="#contact"
-              className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-lg shadow-white/10 transition hover:scale-[1.02]"
-            >
-              Book a Demo
-            </a>
-          </nav>
+body {
+  margin: 0;
+  background: #020617;
+  color: #f8fafc;
+}
 
-          <div className="grid items-center gap-12 py-20 md:grid-cols-2 md:py-28">
-            <div>
-              <div className="mb-4 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-200">
-                Built for small HVAC companies
-              </div>
-              <h1 className="max-w-2xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
-                Stop losing HVAC leads to missed calls and slow follow-up.
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
-                Leadwrench helps HVAC contractors capture more jobs with missed-call text back, automated follow-up, pipeline tracking, and simple reporting through GoHighLevel.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="#contact"
-                  className="rounded-2xl bg-cyan-400 px-6 py-3 text-center font-semibold text-slate-950 transition hover:scale-[1.02]"
-                >
-                  Get a Free Demo
-                </a>
-                <a
-                  href="#services"
-                  className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
-                >
-                  See What We Set Up
-                </a>
-              </div>
-              <div className="mt-8 grid max-w-lg grid-cols-2 gap-4 text-sm text-slate-300 sm:grid-cols-4">
-                {results.map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-3 text-center">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-cyan-950/40 backdrop-blur">
-              <div className="rounded-[1.5rem] bg-slate-900 p-5 ring-1 ring-white/10">
-                <div className="mb-4 flex items-center justify-between">
-                  <div>
-                    <p className="text-sm text-slate-400">Sample Client Snapshot</p>
-                    <h3 className="text-xl font-bold">ABC Heating & Air</h3>
-                  </div>
-                  <div className="rounded-full bg-emerald-400/15 px-3 py-1 text-sm font-medium text-emerald-300">
-                    Live System
-                  </div>
-                </div>
+button,
+input,
+textarea {
+  font: inherit;
+}
 
-                <div className="space-y-3">
-                  <div className="rounded-2xl border border-white/10 bg-slate-800/80 p-4">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">Missed call detected</span>
-                      <span className="text-amber-300">1 min ago</span>
-                    </div>
-                    <p className="mt-2 text-sm text-slate-400">Automatic text sent to lead.</p>
-                  </div>
-                  <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-4">
-                    <div className="text-sm font-medium text-cyan-200">Lead reply</div>
-                    <p className="mt-2 text-sm text-slate-100">
-                      “Yes, my AC stopped working. Can someone come tomorrow?”
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="rounded-2xl border border-white/10 bg-slate-800/80 p-4 text-center">
-                      <div className="text-2xl font-black">42</div>
-                      <div className="text-xs text-slate-400">Leads tracked</div>
-                    </div>
-                    <div className="rounded-2xl border border-white/10 bg-slate-800/80 p-4 text-center">
-                      <div className="text-2xl font-black">18</div>
-                      <div className="text-xs text-slate-400">Booked jobs</div>
-                    </div>
-                    <div className="rounded-2xl border border-white/10 bg-slate-800/80 p-4 text-center">
-                      <div className="text-2xl font-black">9</div>
-                      <div className="text-xs text-slate-400">New reviews</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+.site-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(74, 222, 128, 0.1), transparent 24%),
+    linear-gradient(180deg, #020617 0%, #071124 44%, #020617 100%);
+}
 
-      <section id="services" className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-12 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Services</p>
-          <h2 className="mt-3 text-3xl font-black md:text-4xl">What Leadwrench sets up for HVAC companies</h2>
-          <p className="mt-4 text-slate-300">
-            We build practical systems that help small contractors respond faster, stay organized, and book more work.
-          </p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {services.map((service) => (
-            <div key={service.title} className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20">
-              <h3 className="text-xl font-bold">{service.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{service.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+.site-glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: 0.35;
+  pointer-events: none;
+}
 
-      <section id="how-it-works" className="border-y border-white/10 bg-white/5">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">How it works</p>
-            <h2 className="mt-3 text-3xl font-black md:text-4xl">A simple system that keeps leads from slipping away</h2>
-            <p className="mt-4 max-w-xl text-slate-300">
-              Most HVAC companies do not need more software chaos. They need a clean process that responds fast and keeps every opportunity visible.
-            </p>
-          </div>
-          <div className="space-y-4">
-            {steps.map((step, index) => (
-              <div key={step} className="flex gap-4 rounded-2xl border border-white/10 bg-slate-900/70 p-5">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cyan-400 font-bold text-slate-950">
-                  {index + 1}
-                </div>
-                <p className="pt-1 text-slate-200">{step}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+.site-glow-one {
+  top: -120px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(34, 211, 238, 0.32);
+}
 
-      <section id="results" className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-10 md:grid-cols-2">
-          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-400/10 to-emerald-400/10 p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Why it matters</p>
-            <h2 className="mt-3 text-3xl font-black md:text-4xl">Every missed lead has a dollar value attached to it.</h2>
-            <p className="mt-4 text-slate-300">
-              When a contractor misses calls after hours or forgets to follow up, that lead usually books somewhere else. Leadwrench is designed to help fix that gap with fast response and clean tracking.
-            </p>
-          </div>
+.site-glow-two {
+  top: 120px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  background: rgba(34, 197, 94, 0.22);
+}
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <h3 className="text-2xl font-bold">What you can expect</h3>
-            <ul className="mt-6 space-y-4 text-slate-300">
-              <li className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">Faster first-response time for new leads</li>
-              <li className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">A single place to manage conversations and pipeline stages</li>
-              <li className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">More consistency in follow-up without adding admin work</li>
-              <li className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">Clearer monthly visibility into leads, bookings, and reviews</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+.hero-wrap,
+.content-section,
+.footer-inner-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
-      <section id="contact" className="border-t border-white/10 bg-slate-900/80">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Contact</p>
-            <h2 className="mt-3 text-3xl font-black md:text-4xl">Book a free demo</h2>
-            <p className="mt-4 max-w-xl text-slate-300">
-              Want to see how Leadwrench could work for your HVAC company? Reach out and we’ll walk through your current lead flow and show you where opportunities may be slipping through.
-            </p>
-          </div>
+.hero-wrap {
+  padding-top: 28px;
+  padding-bottom: 84px;
+}
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/20">
-            <form className="space-y-4">
-              <div>
-                <label className="mb-2 block text-sm text-slate-300">Name</label>
-                <input className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 placeholder:text-slate-500" placeholder="Your name" />
-              </div>
-              <div>
-                <label className="mb-2 block text-sm text-slate-300">Business name</label>
-                <input className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 placeholder:text-slate-500" placeholder="ABC Heating & Air" />
-              </div>
-              <div>
-                <label className="mb-2 block text-sm text-slate-300">Phone or email</label>
-                <input className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 placeholder:text-slate-500" placeholder="you@example.com" />
-              </div>
-              <div>
-                <label className="mb-2 block text-sm text-slate-300">What do you need help with?</label>
-                <textarea className="min-h-[120px] w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none placeholder:text-slate-500" placeholder="Tell us about missed calls, follow-up, reviews, or pipeline issues..." />
-              </div>
-              <button type="button" className="w-full rounded-2xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:scale-[1.01]">
-                Request Demo
-              </button>
-              <p className="text-xs leading-6 text-slate-400">
-                By submitting this form, you agree to be contacted by Leadwrench about your request. Message and data rates may apply for SMS. Reply STOP to opt out.
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
 
-      <footer className="border-t border-white/10 bg-slate-950">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
-          <div>
-            <span className="font-semibold text-white">Leadwrench</span> · HVAC lead follow-up systems
-          </div>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms</a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
+.brand-mark {
+  font-size: 31px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.brand-note {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 26px;
+  color: #dbe7f7;
+  font-size: 15px;
+}
+
+.nav-links a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover,
+.footer-links a:hover {
+  color: #67e8f9;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 18px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  border: 0;
+  color: #082f49;
+  background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 100%);
+  box-shadow: 0 14px 40px rgba(34, 211, 238, 0.22);
+}
+
+.button-light {
+  color: #0f172a;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+}
+
+.button-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8fafc;
+}
+
+.button-full {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+.hero-grid,
+.two-column-layout,
+.contact-layout,
+.service-grid,
+.metric-grid,
+.mini-proof-grid {
+  display: grid;
+}
+
+.hero-grid {
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 44px;
+  align-items: center;
+  padding-top: 78px;
+}
+
+.eyebrow-pill,
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(103, 232, 249, 0.22);
+  background: rgba(34, 211, 238, 0.1);
+  color: #67e8f9;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.section-kicker {
+  margin-bottom: 14px;
+}
+
+.section-kicker-green {
+  color: #86efac;
+  border-color: rgba(134, 239, 172, 0.2);
+  background: rgba(34, 197, 94, 0.09);
+}
+
+.hero-copy h1 {
+  margin: 20px 0 0;
+  font-size: clamp(3rem, 6vw, 5.3rem);
+  line-height: 0.97;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+  max-width: 720px;
+}
+
+.hero-paragraph,
+.section-heading p,
+.gradient-panel p,
+.benefit-panel p,
+.contact-layout p,
+.timeline-card p,
+.step-card p,
+.form-disclaimer,
+.service-card p {
+  color: #c7d2e4;
+  line-height: 1.75;
+}
+
+.hero-paragraph {
+  margin-top: 22px;
+  max-width: 640px;
+  font-size: 18px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.mini-proof-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.mini-proof-card {
+  padding: 16px 14px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #d9e3f1;
+  font-size: 14px;
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.035));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 28px;
+}
+
+.hero-panel {
+  padding: 22px;
+}
+
+.status-row,
+.timeline-row,
+.footer-inner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tiny-label {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.status-row h3,
+.service-card h3,
+.gradient-panel h2,
+.benefit-panel h3 {
+  margin: 6px 0 0;
+}
+
+.status-pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(134, 239, 172, 0.12);
+}
+
+.timeline-card {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.56);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.timeline-card-highlight {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.14), rgba(103, 232, 249, 0.08));
+  border-color: rgba(103, 232, 249, 0.14);
+}
+
+.accent-cool {
+  color: #67e8f9;
+}
+
+.accent-warm {
+  color: #fcd34d;
+}
+
+.metric-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.metric-card {
+  padding: 18px 12px;
+  text-align: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.metric-card strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.metric-card span {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.content-section {
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-band {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.section-heading h2,
+.two-column-layout h2,
+.contact-layout h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+}
+
+.service-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.service-card {
+  padding: 26px;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  font-size: 22px;
+  background: linear-gradient(135deg, rgba(103, 232, 249, 0.24), rgba(34, 197, 94, 0.15));
+  color: #dff8ff;
+}
+
+.two-column-layout,
+.contact-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  align-items: start;
+}
+
+.stack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.step-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px;
+}
+
+.step-badge {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 900;
+  color: #082f49;
+  background: linear-gradient(135deg, #67e8f9, #22d3ee);
+}
+
+.gradient-panel,
+.benefit-panel,
+.form-shell {
+  padding: 28px;
+}
+
+.gradient-panel {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.14), rgba(34, 197, 94, 0.11));
+}
+
+.benefit-list {
+  margin: 16px 0 0;
+  padding-left: 20px;
+  color: #d4deec;
+  line-height: 1.95;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.field-group label {
+  font-size: 14px;
+  color: #dbe7f7;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(2, 6, 23, 0.8);
+  color: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #64748b;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(103, 232, 249, 0.5);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.08);
+}
+
+textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.form-disclaimer {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.footer-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-inner-wrap {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: #94a3b8;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+@media (max-width: 960px) {
+  .hero-grid,
+  .two-column-layout,
+  .contact-layout,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-proof-grid,
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-wrap,
+  .content-section,
+  .footer-inner-wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .nav-bar,
+  .footer-inner-wrap,
+  .status-row,
+  .timeline-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .mini-proof-grid,
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-mark {
+    font-size: 26px;
+  }
 }
