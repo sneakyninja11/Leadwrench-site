@@ -52,7 +52,7 @@ export default function App() {
           </div>
 
           <div className="nav-actions">
-            <a href="tel:4056624753" className="phone-link">(405) 555-5555</a>
+            <a href="tel:4056624753" className="phone-link">(405) 662-4753</a>
             <a href="#contact" className="button button-light">Book a Demo</a>
           </div>
         </nav>
